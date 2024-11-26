@@ -6,4 +6,10 @@ defmodule XFirstApiWeb.PageController do
     # so skip the default app layout.
     render(conn, :home, layout: false)
   end
+
+  def users(conn, _params) do
+    IO.puts("users route has been called!!!")
+
+    render(conn, :users, layout: false)
+  end
 end
