@@ -8,8 +8,11 @@ defmodule XFirstApiWeb.PageController do
   end
 
   def users(conn, _params) do
-    IO.puts("users route has been called!!!")
+    users = [
+      %{id: 1, name: "marco", email: "marco.polo@polo.xi"},
+      %{id: 2, name: "franco", email: "franco.polo@polo.xi"},
+    ]
 
-    render(conn, :users, layout: false)
+    json(conn, users)
   end
 end
