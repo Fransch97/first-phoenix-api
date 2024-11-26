@@ -5,14 +5,14 @@ defmodule XFirstApiWeb.PostJSON do
   Renders a list of posts.
   """
   def index(%{posts: posts}) do
-    %{data: for(post <- posts, do: data(post))}
+    %{posts: for(post <- posts, do: data(post))}
   end
 
   @doc """
   Renders a single post.
   """
   def show(%{post: post}) do
-    %{data: data(post)}
+    %{posts: data(post)}
   end
 
   defp data(%Post{} = post) do
