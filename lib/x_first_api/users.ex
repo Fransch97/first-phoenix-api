@@ -18,7 +18,8 @@ defmodule XFirstApi.Users do
 
   """
   def list_users do
-    Repo.all(User)
+    Repo.all(User) |> Repo.preload(:posts)
+
   end
 
   @doc """
@@ -35,7 +36,7 @@ defmodule XFirstApi.Users do
       ** (Ecto.NoResultsError)
 
   """
-  def get_user!(id), do: Repo.get!(User, id)
+  def get_user!(id), do: Repo.get!(User, id)|> Repo.preload(:posts)
 
   @doc """
   Creates a user.

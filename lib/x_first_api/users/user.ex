@@ -6,6 +6,7 @@ defmodule XFirstApi.Users.User do
     field :name, :string
     field :email, :string
     has_many :posts, XFirstApi.Posts.Post
+
     timestamps(type: :utc_datetime)
   end
 
