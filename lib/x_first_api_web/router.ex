@@ -25,6 +25,7 @@ defmodule XFirstApiWeb.Router do
     pipe_through :api
 
     resources "/posts", PostController, except: [:new]
+    resources "/chats", ChatController, except: [:new]
   end
 
   # Other scopes may use custom stacks.
