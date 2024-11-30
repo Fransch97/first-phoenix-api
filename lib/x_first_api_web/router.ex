@@ -26,6 +26,7 @@ defmodule XFirstApiWeb.Router do
 
     resources "/posts", PostController, except: [:new]
     resources "/chats", ChatController, except: [:new]
+    resources "/users", UserController, except: [:new]
   end
 
   # Other scopes may use custom stacks.
